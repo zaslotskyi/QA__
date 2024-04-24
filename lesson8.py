@@ -14,7 +14,7 @@ else:
             print(spaces + stars)
         else:
             spaces_before = ' ' * ((difference - (i - 1) * 2) // 2)
-            spaces_inside = ' ' * (min_width * (i - 1))
+            spaces_inside = ' ' * (min_width + 2 * (i - 2))
             stars = '*' + spaces_inside + '*'
             print(spaces_before + stars)
     for j in range((difference // 2), 0, -1):
@@ -24,6 +24,6 @@ else:
             print(spaces + stars)
         else:
             spaces_before = ' ' * ((difference - (j - 1) * 2) // 2)
-            spaces_inside = ' ' * (min_width * (j - 1))
+            spaces_inside = ' ' * (min_width + 2 * (j - 2))
             stars = '*' + spaces_inside + '*'
             print(spaces_before + stars)
