@@ -1,34 +1,27 @@
 import string
 
-
 def can_be_email(email):
-    found = False
-    if (email.index("@") < email.index(".")
-            and email[0] != "@"
-            and email[-1] != "."
-            and email.count("@") == 1
-            and email.count(".") == 1):
+    if (
+        email.count("@") == 1
+        and email.count(".") == 1
+        and email[0] != "@"
+        and email[-1] != "."
+        and email.index("@") < email.index(".")
+        and "@." not in email
+    ):
         for char in email:
             if char not in string.ascii_letters + string.digits + "@.":
-                found = True
-                break
-        if not found:
-            return True
-        else:
-            return False
+                return False
+        return True
     else:
         return False
 
-
-
-assert can_be_email("aaa@bbb.ccc") == True, 'Test1'
-assert can_be_email("@aaa@bbb.ccc") == False, 'Test2'
-assert can_be_email("aaa@bbb.ccc.") == False, 'Test3'
-assert can_be_email("aaa777@bbb.ccc") == True, 'Test4'
-assert can_be_email("aaa.bbb@ccc") == False, 'Test5'
+assert can_be_email("aaa@bbb.ccc"), 'Test1'
+assert not can_be_email("@aaa@bbb.ccc"), 'Test2'
+assert not can_be_email("aaa@bbb.ccc."), 'Test3'
+assert can_be_email("aaa777@bbb.ccc"), 'Test4'
+assert not can_be_email("aaa.bbb@ccc"), 'Test5'
+assert not can_be_email('"aaabbb.ccc"'), 'Test6'
+assert not can_be_email('"aaa@bbbccc"'), 'Test7'
+assert not can_be_email('"aaabbbccc"'), 'Test8'
 print('Passed')
-
-
-
-
-
