@@ -1,4 +1,4 @@
-def avarage_between_elements(lst):
+def average_between_elements(lst):
 
     new_list = []
 
@@ -11,7 +11,7 @@ def avarage_between_elements(lst):
 
 
 
-assert avarage_between_elements([1, 2, 3, 4, 5]) == [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5], 'Test1'
-assert avarage_between_elements([0, 1, 2, 3, 4, 5, 6, 7]) == [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7], 'Test2'
-assert avarage_between_elements([]) == [], 'Test3'
+assert average_between_elements([1, 2, 3, 4, 5]) == [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5], 'Test1'
+assert average_between_elements([0, 1, 2, 3, 4, 5, 6, 7]) == [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7], 'Test2'
+assert average_between_elements([]) == [], 'Test3'
 print('Passed')
