@@ -1,13 +1,13 @@
-import math
+from math import prod
 
 
 def sum_and_product(min_value, max_value, lst):
 
-    new_list = [i for i in lst if i >= min_value and i <= max_value]
+    new_list = [i for i in lst if min_value <= i <= max_value]
 
     if len(new_list) > 0:
         sum_ = sum(new_list)
-        product = math.prod(new_list)
+        product = prod(new_list)
     else:
         sum_ = None
         product = None
