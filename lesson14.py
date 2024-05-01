@@ -15,6 +15,12 @@ for i in my_list:
         divisible_by_3_and_5.append(i)
 
 
+# divisible_by_3 = [i for i in my_list if i % 3 == 0 and i % 5 != 0]
+# divisible_by_5 = [i for i in my_list if i % 5 == 0 and i % 3 != 0]
+# divisible_by_3_and_5 = [i for i in my_list if i % 3 == 0 and i % 5 == 0]
+
+
+
 
 assert divisible_by_3 == [3, 6, 9, 12], 'Test1'
 assert divisible_by_5 == [5, 10], 'Test2'
