@@ -1,9 +1,9 @@
 import math
 
 
-def sum_and_product(min, max, lst):
+def sum_and_product(min_value, max_value, lst):
 
-    new_list = [i for i in lst if i >= min and i <= max]
+    new_list = [i for i in lst if i >= min_value and i <= max_value]
 
     if len(new_list) > 0:
         sum_ = sum(new_list)
