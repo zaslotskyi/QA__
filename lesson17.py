@@ -3,24 +3,18 @@ my_list = [['a', 'c', 'e'],
            ['a', 'n', 'k'],
            ['e', 'l', 'i']]
 
+num_rows = len(my_list)
+num_cols = len(my_list[0])
+
+sorted_list = [[] for _ in range(num_rows)]
 
 
-new_list = [sorted([i[0] for i in my_list]),
-              sorted([i[1] for i in my_list]),
-              sorted([i[2] for i in my_list])]
-
-
-sorted_list = [[i[0] for i in new_list],
-               [i[1] for i in new_list],
-               [i[2] for i in new_list],
-               [i[3] for i in new_list]]
-
+for j in range(num_cols):
+    column = [my_list[i][j] for i in range(num_rows)]
+    column.sort()
+    for i in range(num_rows):
+        sorted_list[i].append(column[i])
 
 print(sorted_list)
-
-
-
-
-
 
 
