@@ -1,0 +1,6 @@
+Filename: file2.txt
+You have source_directory with nested directories (any level of nesting).testtesttest
+--------------------------------------------------
+Filename: file3.txt
+You have source_directory with nested directories (any level of nesting).
+--------------------------------------------------
