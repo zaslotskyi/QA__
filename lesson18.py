@@ -32,6 +32,7 @@ def testers_in_company(test_design_writers,
 
 # print(testers_in_company([1, 3, 5],[2, 3, 4, 6, 7, 8],[1, 2, 3, 9, 10], [2, 5, 6, 1]))
 
+
 assert testers_in_company([1, 3, 5],[2, 3, 4, 6, 7, 8],[1, 2, 3, 9, 10], [2, 5, 6, 1]) == ("all testers in the team:\n[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
                                                                                            ",\ntesters who can only write scripts:\n[4, 6, 7, 8],"
                                                                                            "\ntesters who are at work today:\n[3, 4, 7, 8, 9, 10],"
