@@ -5,7 +5,7 @@ def lecture_days(start_date: str,
                  count_of_lectures: int,
                  first_day_of_week: str,
                  second_day_of_week: str,
-                 start_time: str) -> list:
+                 start_time: str) -> str:
     """
 
     :param start_date: the start date of the first lecture. format dd.mm.yyyy
@@ -53,15 +53,8 @@ def lecture_days(start_date: str,
     return '\n'.join(lectures)
 
 
-
 print(lecture_days('11.04.2024',
                    32,
                    'Thursday',
                    'Monday',
                    '19:15'))
-
-
-
-
-
-
