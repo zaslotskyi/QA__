@@ -8,7 +8,7 @@ def lecture_days(start_date: str,
                  start_time: str) -> str:
     """
 
-    :param start_date: the start date of the first lecture. format '%d.%m.%Y'
+    :param start_date: the start date of the first lecture. format dd.mm.yyyy
     :param count_of_lectures: total number of lectures
     :param first_day_of_week: the day of the first lecture
     :param second_day_of_week: the day of the second lecture
