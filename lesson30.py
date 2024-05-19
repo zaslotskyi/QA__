@@ -34,21 +34,21 @@ def lecture_days(start_date: str,
 
     lectures = []
 
-    for i in list_of_lectures:
-        if i == 1:
-            lectures.append(f'Lecture {i}: {new_date} {datetime.now().year} {start_time}')
-        elif i % 2 == 0:
+    for lecture in list_of_lectures:
+        if lecture == 1:
+            lectures.append(f'Lecture {lecture}: {new_date} {datetime.now().year} {start_time}')
+        elif lecture % 2 == 0:
             delta = timedelta(days=difference_for_first_delta)
             date_for_pair_lectures = parsed_date + delta
             parsed_date_for_pair_lectures = date_for_pair_lectures.strftime('%d %b')
             parsed_date = date_for_pair_lectures
-            lectures.append(f'Lecture {i}: {parsed_date_for_pair_lectures} {datetime.now().year} {start_time}')
-        elif i % 2 != 0:
+            lectures.append(f'Lecture {lecture}: {parsed_date_for_pair_lectures} {datetime.now().year} {start_time}')
+        elif lecture % 2 != 0:
             delta = timedelta(days=difference_for_second_delta)
             date_for_odd_lectures = parsed_date + delta
             parsed_date_for_odd_lectures = date_for_odd_lectures.strftime('%d %b')
             parsed_date = date_for_odd_lectures
-            lectures.append(f'Lecture {i}: {parsed_date_for_odd_lectures} {datetime.now().year} {start_time}')
+            lectures.append(f'Lecture {lecture}: {parsed_date_for_odd_lectures} {datetime.now().year} {start_time}')
 
     return '\n'.join(lectures)
 
