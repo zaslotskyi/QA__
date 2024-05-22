@@ -21,6 +21,6 @@ seq1 = [1, 2, 3, 4, 5]
 seq2 = [9, 8, 7]
 
 
-print(custom_zip(seq1, seq2))  # [(1, 9), (2, 8), (3, 7)]
-print(custom_zip(seq1, seq2, full=True, default="Q"))  # [(1, 9), (2, 8), (3, 7), (4, 'Q'), (5, 'Q')]
+print(custom_zip(seq1, seq2))
+print(custom_zip(seq1, seq2, full=True, default="Q"))
 print(custom_zip(seq1, seq2, full=True))
