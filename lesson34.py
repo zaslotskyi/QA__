@@ -1,4 +1,5 @@
 def custom_zip(*sequences, full=False, default=None):
+
     new_list = []
 
     if not full:
