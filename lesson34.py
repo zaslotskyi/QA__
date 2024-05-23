@@ -24,3 +24,4 @@ seq2 = [9, 8, 7]
 print(custom_zip(seq1, seq2))
 print(custom_zip(seq1, seq2, full=True, default="Q"))
 print(custom_zip(seq1, seq2, full=True))
+print(custom_zip(seq1, seq2, full=True, default="Q"))
