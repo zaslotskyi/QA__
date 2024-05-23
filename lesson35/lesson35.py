@@ -1,8 +1,6 @@
 class Grocery:
 
-
     def __init__(self, product_name: str, price: int, count: int):
-
         self.product_name = product_name
         self.price = price
         self.count = count
@@ -39,9 +37,6 @@ class Grocery:
         return f'To buy {amount} products, you need {final_price} hryvnias'
 
 
-
-
-
 apple = Grocery('apple', 10, 20)
 print(apple.count)
 apple.add_product(4)
@@ -50,4 +45,3 @@ print(Grocery.purchase_opportunity(10, 30))
 
 lemon = Grocery('lemon', 5, 30)
 print(lemon.total_price_of_product())
-
