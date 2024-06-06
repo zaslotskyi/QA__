@@ -46,21 +46,31 @@ class Pixel(NumericRangeMixin):
             return Pixel(new_red, new_green, new_blue)
 
     def __mul__(self, other):
-        if isinstance(other, (int, float)):
-            new_red = min(floor(self.__red * other), 255)
-            new_green = min(floor(self.__green * other), 255)
-            new_blue = min(floor(self.__blue * other), 255)
-            return Pixel(new_red, new_green, new_blue)
+        if not isinstance(other, (int, float)):
+            raise TypeError(f'Value must be int or float')
+        else:
+            if isinstance(other, (int, float)) and other > 0:
+                new_red = min(floor(self.__red * other), 255)
+                new_green = min(floor(self.__green * other), 255)
+                new_blue = min(floor(self.__blue * other), 255)
+                return Pixel(new_red, new_green, new_blue)
+            else:
+                raise ValueError(f'Value must be > 0')
 
     def __rmul__(self, other):
         return self.__mul__(other)
 
     def __truediv__(self, other):
-        if isinstance(other, (int, float)) and other > 0:
-            new_red = floor(self.__red / other)
-            new_green = floor(self.__green / other)
-            new_blue = floor(self.__blue / other)
-            return Pixel(new_red, new_green, new_blue)
+        if not isinstance(other, (int, float)):
+            raise TypeError(f'Value must be int or float')
+        else:
+            if isinstance(other, (int, float)) and other > 0:
+                new_red = floor(self.__red / other)
+                new_green = floor(self.__green / other)
+                new_blue = floor(self.__blue / other)
+                return Pixel(new_red, new_green, new_blue)
+            else:
+                raise ValueError(f'Value must be > 0')
 
     def __eq__(self, other):
         if isinstance(other, Pixel):
@@ -87,6 +97,6 @@ print(Pixel1 + Pixel2)
 print(Pixel3 - Pixel4)
 print(Pixel4 - Pixel3)
 print(Pixel5 / 3)
-print(Pixel6 * 3.5)
-print(3.5 * Pixel6)
+print(Pixel6 * 3)
+print(0 * Pixel6)
 print(Pixel7 == Pixel8)
