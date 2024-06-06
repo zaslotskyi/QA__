@@ -14,7 +14,6 @@ class Garage:
         method returns car info
         :return: string of car info
         """
-
         return (f'{self.model} {self.year}:'
                 f'\nEngine - {self.engine}'
                 f'\nMileage - {self.mileage} км'
